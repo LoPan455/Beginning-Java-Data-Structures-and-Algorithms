@@ -30,6 +30,6 @@ public class Main {
         result += Math.pow(2, charArray.length - i);
       }
     }
-      System.out.println(result);
+      assert result == 180;
   }
 }
