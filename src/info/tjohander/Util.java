@@ -2,6 +2,7 @@ package info.tjohander;
 
 import static java.util.Random.*;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -14,7 +15,7 @@ public class Util {
     int[] result = new int[size];
     for (int i = 0; i < size; i++) {
       result[i] = ThreadLocalRandom.current().nextInt(max);
-    }
+      }
     return result;
   }
 }
