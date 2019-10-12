@@ -33,7 +33,7 @@ public class BubbleSort {
   }
 
   public static void main(String[] args) {
-    int[] array = Util.generateArrayOfSizeAndMax(5000, 100);
+    int[] array = Util.generateArrayOfSizeAndMax(10000, 100);
     // Let's see what we're working with
     System.out.println(Arrays.toString(array));
 
@@ -49,7 +49,9 @@ public class BubbleSort {
     // Let's look at the array now
     System.out.println(Arrays.toString(array));
 
+    // Let's make a quick assertion to ensure each int is sorted properly.
     for (int i = 0; i < array.length - 1; i++) {
+      // There will be duplicates here, so we need <= as the comparison operator
       assert array[i] <= array[i + 1];
     }
     System.out.println("Time to complete: " + Duration.between(start, end).toMillis() + "ms");
